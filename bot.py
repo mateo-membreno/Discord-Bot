@@ -11,7 +11,8 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN =
+    load_dotenv()
+    TOKEN = os.getenv("TOKEN")
     print("got token")
     intents = discord.Intents.default()
     intents.members = True
