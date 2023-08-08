@@ -1,3 +1,4 @@
+import random
 def handle_response(message) -> str:
     p_message = message.lower()
 
@@ -6,4 +7,4 @@ def handle_response(message) -> str:
     elif p_message == 'roll':
         return str(4)
     else:
-        return "function worked!"
+            return "cardiac sensor deployed"
