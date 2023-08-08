@@ -1,10 +1,15 @@
+import openai
 import random
-def handle_response(message) -> str:
-    p_message = message.lower()
+import ai_response
 
-    if p_message == 'hello':
-        return 'Hi!'
-    elif p_message == 'roll':
-        return str(4)
+def handle_response(message) -> str:
+    message = message.lower()
+    
+    if message.startswith("ai "):
+        return ai_response.openai_respond(message[2:])
+    elif message == 'roll':
+        return int(random() * 6) + 1
+    elif message == 'jynxi':
+        return "cardiac sensor deployed"
     else:
-            return "cardiac sensor deployed"
+        return "no reply"
