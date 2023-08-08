@@ -29,7 +29,6 @@ def run_discord_bot():
     async def on_message(message):
         if message.author == client.user:
             return
-        print(message)
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
@@ -37,7 +36,6 @@ def run_discord_bot():
         print(username, " said: " ,user_message, " in", channel)
         if user_message[0] == '!':
             user_message = user_message[1:]
-            print(user_message)
             await send_message(message, user_message)
         
         
