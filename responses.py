@@ -2,8 +2,10 @@ import discord
 import ai_response
 from pathlib import Path
 
-def handle_openai(message):
-    return ai_response.openai_respond(message)
+def handle_gpt(message):
+    return ai_response.gpt_respond(message)
+def handle_dalle(message):
+    return ai_response.dalle_respond(message)
 def handle_jynxi(message):
     return "cardiac sensor deployed"
 def handle_image(message):
@@ -12,8 +14,10 @@ def handle_image(message):
     embed.set_image(url="attachment://{}.jpeg".format(message))
     return file, embed
 
+
 response_dictionary = {
-    "ai ": handle_openai, 
+    "gpt ": handle_gpt,
+    "image " : handle_dalle,
     "jynxi " : handle_jynxi,
     "future " : handle_image,
 }
@@ -28,3 +32,4 @@ def handle_response(message) :
     # argument is rest of message if exists, if not argument is initial command
     else:
         return command(parts[1]) if len(parts) > 1 else command(parts[0])
+    
