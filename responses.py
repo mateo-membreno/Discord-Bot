@@ -28,7 +28,7 @@ def handle_response(message) :
     command = response_dictionary.get(parts[0]+ ' ')
 
     if command is None:
-        return "no reply"
+        return "{} is not a command!".format(message)
     # argument is rest of message if exists, if not argument is initial command
     else:
         return command(parts[1]) if len(parts) > 1 else command(parts[0])
