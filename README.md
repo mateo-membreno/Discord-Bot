@@ -1,8 +1,8 @@
 # Discord Bot
-[Click to add **Teo's Bot** to server](https://shellshock.io/)
+[Click to add **Teo's Bot** to server](https://discord.com/api/oauth2/authorize?client_id=1138187724931735685&permissions=41766446693952&scope=bot)
 
 ## Commands
-To acess bot begin message with !
+To access bot begin message with !
 
 Cmmands:
 - gpt --> accesess chat GPT through API call and returns text response
