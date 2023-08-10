@@ -15,11 +15,11 @@
 To access bot begin messages with !
 
 Cmmands:
-- gpt --> accesses chat GPT through API call and send text response in channel
+- gpt --> accesses ChatGPT through API call and send text response in channel
     * ex. !gpt what is the population of Orlando, Florida
 - image --> accesses OpenAI's DALL·E through API call and send image in channel
-    * ex. !image anakin skywalker from star wars
-- future --> returns picture of Future 
+    * ex. !image Anakin Skywalker from Star Wars
+- future --> sends picture of Future (the bot's profile picture)
     * ex. !future
 
 
